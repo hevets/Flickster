@@ -9,9 +9,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@mipmap/ic_launcher"
-        android:layout_centerVertical="true"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
 
     <TextView
         android:id="@+id/tvTitle"
@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         tools:text="Arrival"
         android:layout_alignParentTop="true"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         android:layout_toRightOf="@+id/ivMovieImage"
         android:layout_toEndOf="@+id/ivMovieImage" />
 
@@ -26,6 +27,7 @@
         android:id="@+id/tvOverview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
         tools:text="Taking place after alien crafts land around the world, an expert linguist is recruited by the military to determine whether they come in peace or are a threat."
         android:layout_below="@+id/tvTitle"
         android:layout_toRightOf="@+id/ivMovieImage"
