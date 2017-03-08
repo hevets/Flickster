@@ -1,6 +1,7 @@
 package com.hevets.flickster.adapters;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -62,7 +63,16 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         // Use the ViewHolder to populate each view
         viewHolder.title.setText(movie.getOriginalTitle());
         viewHolder.overview.setText(movie.getOverview());
-        Picasso.with(getContext()).load(movie.getPosterPath()).into(viewHolder.imageView);
+
+        String imageViewPath;
+
+        if (getContext().getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+            imageViewPath = movie.getPosterPath();
+        } else {
+            imageViewPath = movie.getBackdropPath();
+        }
+
+        Picasso.with(getContext()).load(imageViewPath).into(viewHolder.imageView);
 
         return convertView;
     }
