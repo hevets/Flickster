@@ -24,7 +24,8 @@
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         tools:text="Arrival"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorPrimaryTextColorDark"/>
 
     <TextView
         android:id="@+id/tvOverview"
@@ -37,6 +38,7 @@
         android:layout_below="@+id/tvTitle"
         android:layout_toRightOf="@+id/ivMovieImage"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorPrimaryTextColorDark"/>
 
 </RelativeLayout>
