@@ -70,15 +70,15 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
             imageViewPath = movie.getPosterPath();
             Picasso.with(getContext())
                     .load(imageViewPath)
-                    .placeholder(R.drawable.placeholder)
-                    .resize(300, 0)
+                    .placeholder(R.mipmap.loading_image)
+                    .resize(400, 0)
                     .into(viewHolder.imageView);
         } else {
             imageViewPath = movie.getBackdropPath();
             Picasso.with(getContext())
                     .load(imageViewPath)
-                    .placeholder(R.drawable.placeholder)
-                    .resize(0, 300)
+                    .placeholder(R.mipmap.loading_image)
+                    .resize(0, 500)
                     .into(viewHolder.imageView);
         }
 
