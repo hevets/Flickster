@@ -68,11 +68,19 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
 
         if (getContext().getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
             imageViewPath = movie.getPosterPath();
+            Picasso.with(getContext())
+                    .load(imageViewPath)
+                    .placeholder(R.drawable.placeholder)
+                    .resize(300, 0)
+                    .into(viewHolder.imageView);
         } else {
             imageViewPath = movie.getBackdropPath();
+            Picasso.with(getContext())
+                    .load(imageViewPath)
+                    .placeholder(R.drawable.placeholder)
+                    .resize(0, 300)
+                    .into(viewHolder.imageView);
         }
-
-        Picasso.with(getContext()).load(imageViewPath).into(viewHolder.imageView);
 
         return convertView;
     }
